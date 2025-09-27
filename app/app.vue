@@ -50,7 +50,7 @@
         </div>
         <div class="hero-image slide-in-right" :class="{ visible: heroVisible }">
           <div class="hero-avatar">
-            <img src="/images/profile.jpg" alt="Samsul Zamzuri" @error="handleImageError">
+            <img src="~/assets/images/profile.jpg" alt="Samsul Zamzuri" @error="handleImageError">
           </div>
         </div>
       </div>
