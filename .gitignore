@@ -1,10 +1,11 @@
-# Nuxt.js build outputs
+# Nuxt.js build outputs and cache
 .output
 .data
 .nuxt
 .nitro
 .cache
 dist
+.wrangler
 
 # Node.js dependencies
 node_modules/
@@ -39,11 +40,16 @@ coverage/
 .nyc_output/
 junit.xml
 .coverage
+cypress/videos/
+cypress/screenshots/
+test-results/
+playwright-report/
 
 # IDE and editors
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+!.vscode/launch.json
 .idea/
 .fleet/
 *.swp
@@ -58,6 +64,7 @@ junit.xml
 .Trashes
 ehthumbs.db
 Thumbs.db
+.fuse_hidden*
 
 # Build tools and caches
 .parcel-cache
@@ -66,6 +73,7 @@ Thumbs.db
 .rts2_cache_es/
 .rts2_cache_umd/
 *.tsbuildinfo
+.turbo/
 
 # Package managers
 .npm
@@ -84,14 +92,10 @@ Thumbs.db
 .firebaserc
 firebase-debug.log*
 firestore-debug.log*
+.wrangler/
 
 # Serverless
 .serverless/
-
-# Static site generators
-public/
-.next/
-.nuxt/
 
 # Temporary files
 tmp/
@@ -102,7 +106,6 @@ temp/
 # Backup files
 *.bak
 *.backup
-*~
 
 # Archives
 *.7z
@@ -115,4 +118,13 @@ temp/
 *.zip
 
 # Application specific
-# Add any project-specific ignores here
+# Keep important asset files that should be tracked
+!app/assets/**
+!assets/**
+!static/**
+!public/favicon.*
+
+# Ignore generated or processed assets
+public/_nuxt/
+public/.vite/
+.vite/
